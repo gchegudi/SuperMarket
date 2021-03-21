@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Details.dart';
 
 class TabBarItems extends StatefulWidget {
   @override
@@ -40,7 +41,7 @@ class _TabBarItems extends State<TabBarItems> {
                               top: BorderSide(color: Colors.grey, width: 0.5))),
                       child: TabBarView(children: <Widget>[
                         Container(
-                          child: _fruits(),
+                          child: _fruits(context),
                         ),
                         Container(
                           child: _vegetables(),
@@ -66,12 +67,13 @@ class _TabBarItems extends State<TabBarItems> {
   }
 }
 
-_fruits() {
+Widget _fruits(context) {
   return Container(
       child: GridView.count(
           primary: false,
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(10),
           crossAxisCount: 2,
+          mainAxisSpacing: 20,
           children: <Widget>[
         Container(
             child: Column(children: [
@@ -84,15 +86,52 @@ _fruits() {
               highlightedBorderColor: Colors.red,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Details()));
+              },
             ),
+          ),
+          SizedBox(
+            height: 5,
           ),
           Container(
             child: Text(
               'Apple',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -108,12 +147,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Banana',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -129,12 +202,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Grapes',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -150,12 +257,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Mango',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -171,12 +312,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Orange',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -192,12 +367,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Guava',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -213,12 +422,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Papaya',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -234,12 +477,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'PineApple',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
         Container(
             child: Column(children: [
@@ -255,12 +532,46 @@ _fruits() {
               onPressed: () {},
             ),
           ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             child: Text(
               'Sapota',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Container(
+            child: Text(
+              '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                Container(
+                  child: Text(
+                    '0.50 kg',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  width: 60,
+                  height: 20,
+                ),
+                Container(
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onPressed: () {},
+                      child: Text('Add')),
+                  width: 60,
+                  height: 20,
+                  color: Colors.green,
+                )
+              ]))),
         ])),
       ]));
 }
@@ -271,6 +582,7 @@ _vegetables() {
           primary: false,
           padding: const EdgeInsets.all(20),
           crossAxisCount: 2,
+          mainAxisSpacing: 15,
           children: <Widget>[
         Container(
             child: Column(children: [
@@ -300,7 +612,18 @@ _vegetables() {
               '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+            child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                onPressed: () {},
+                child: Text('Add')),
+            width: 60,
+            height: 20,
+            color: Colors.green,
+          )),
         ])),
         Container(
             child: Column(children: [
@@ -329,7 +652,18 @@ _vegetables() {
               '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+            child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                onPressed: () {},
+                child: Text('Add')),
+            width: 60,
+            height: 20,
+            color: Colors.green,
+          )),
         ])),
         Container(
             child: Column(children: [
@@ -358,7 +692,18 @@ _vegetables() {
               '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+            child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                onPressed: () {},
+                child: Text('Add')),
+            width: 60,
+            height: 20,
+            color: Colors.green,
+          )),
         ])),
         Container(
             child: Column(children: [
@@ -387,7 +732,18 @@ _vegetables() {
               '\$ 25.00',
               style: TextStyle(fontSize: 20),
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+            child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                onPressed: () {},
+                child: Text('Add')),
+            width: 60,
+            height: 20,
+            color: Colors.green,
+          )),
         ])),
         Container(
           height: 150,
